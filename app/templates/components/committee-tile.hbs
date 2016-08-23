@@ -1,0 +1,10 @@
+<li {{action "subcommitteesShow"}}>{{committee.name}}</li>
+{{#if subcommitteesShow}}
+  {{#if committee.subcommittees}}
+  <ul>
+     {{#each committee.subcommittees as |subcommittee|}}
+     <li>{{subcommittee.name}}</li>
+     {{/each}}
+   </ul>
+  {{/if}}
+{{/if}}

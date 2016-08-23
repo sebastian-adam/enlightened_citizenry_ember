@@ -1,0 +1,28 @@
+<h1>Committees in Senate</h1>
+<ul>
+  {{#each model as |committee|}}
+    {{#if (eq committee.chamber 'senate')}}
+      {{committee-tile committee=committee}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h1>Committees in House</h1>
+<ul>
+  {{#each model as |committee|}}
+    {{#if (eq committee.chamber 'house')}}
+      {{committee-tile committee=committee}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h1>Committees in Both</h1>
+<ul>
+  {{#each model as |committee|}}
+    {{#if (eq committee.chamber 'joint')}}
+      {{committee-tile committee=committee}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+{{#link-to 'committees' 2}}Next Page{{/link-to}}

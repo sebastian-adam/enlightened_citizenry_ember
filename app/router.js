@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('legislators', {path: '/legislators/:zip'});
   this.route('sub-committees');
   this.route('bills', {path: '/bills/:page'});
+  this.route('upcoming-bills');
 });
 
 export default Router;

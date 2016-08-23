@@ -1,0 +1,17 @@
+<h1>Upcoming Bills in Senate</h1>
+<ul>
+  {{#each model as |upcoming-bill|}}
+    {{#if (eq upcoming-bill.chamber 'senate')}}
+      {{upcoming-bill-tile upcoming-bill=upcoming-bill}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h1>Upcoming Bills in House</h1>
+<ul>
+  {{#each model as |upcoming-bill|}}
+    {{#if (eq upcoming-bill.chamber 'house')}}
+      {{upcoming-bill-tile upcoming-bill=upcoming-bill}}
+    {{/if}}
+  {{/each}}
+</ul>
